@@ -44,7 +44,7 @@ export default function Home() {
         </section>
       </motion.section>
       {/* 스크롤 공간을 제공하는 tall container */}
-      <div ref={stickyContainerRef} className="relative h-[400vh]">
+      <div ref={stickyContainerRef} className="relative h-[200vh]">
         {/* 화면에 고정될 sticky container */}
         <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
           {/* 문구들을 중앙에 배치하기 위한 div */}
@@ -59,15 +59,6 @@ export default function Home() {
       </div>
 
       <CardSection />
-
-      <motion.h1
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="z-10 text-6xl font-bold text-white"
-      >
-        국내 대표 건강기록 통합관리 플랫폼, inPHR
-      </motion.h1>
     </>
   );
 }
