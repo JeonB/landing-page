@@ -11,7 +11,8 @@ interface PhraseProps {
 }
 
 export default function Phrase({ children, index, activeIndexValue }: PhraseProps) {
-  const [isActive, setIsActive] = useState(false);
+  // 초기 상태를 activeIndexValue의 현재 값으로 설정
+  const [isActive, setIsActive] = useState(() => Math.floor(activeIndexValue.get()) === index);
 
   useMotionValueEvent(activeIndexValue, 'change', (latest) => {
     setIsActive(Math.floor(latest) === index);
@@ -19,7 +20,7 @@ export default function Phrase({ children, index, activeIndexValue }: PhraseProp
 
   return (
     <motion.p
-      className="z-10 max-w-4xl p-4 text-center text-5xl font-bold whitespace-pre-line"
+      className="max-w-4xl p-4 text-center text-5xl font-bold whitespace-pre-line"
       animate={{
         color: isActive ? black : gray,
         scale: isActive ? 1.1 : 1,
