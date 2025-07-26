@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { FiCpu, FiShield } from 'react-icons/fi';
 import AnimatedHeader from './AnimatedHeader';
 import Section from './Section';

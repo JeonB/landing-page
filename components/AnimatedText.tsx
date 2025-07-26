@@ -1,4 +1,4 @@
-import { motion, useInView } from 'motion/react';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 type MotionTag = keyof typeof motion;

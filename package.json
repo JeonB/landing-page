@@ -8,14 +8,16 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@radix-ui/react-tabs": "^1.1.12",
+    "chromatic": "^13.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.23.9",
     "lucide-react": "^0.525.0",
-    "motion": "^12.23.6",
     "next": "15.4.1",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
