@@ -1,9 +1,9 @@
 name: 'Chromatic Deployment'
 on:
   push:
-    branches: [ devleop ]
+    branches: [ develop ]
   pull_request:
-    branches: [ devleop ]
+    branches: [ develop ]
 
 jobs:
   chromatic:
