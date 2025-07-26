@@ -35,7 +35,7 @@ export const IconAnimation: Story = {
   parameters: {
     docs: {
       description: {
-        story: '테스트 탭입니다.',
+        story: '테스트 탭입니다.!',
       },
     },
   },
@@ -46,7 +46,7 @@ export const ResponsiveGrid: Story = {
   parameters: {
     docs: {
       description: {
-        story: '테스트 탭입니다.',
+        story: '테스트 탭입니다.??',
       },
     },
   },
