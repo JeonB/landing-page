@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 import { ScrollAnimations } from './ScrollAnimations';
 
 const meta: Meta<typeof ScrollAnimations> = {

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 import { useMotionValue } from 'framer-motion';
 import { useEffect } from 'react';
 import Phrase from './Phrase';

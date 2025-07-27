@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 import AnimatedCounter from './AnimatedCounter';
 
 const meta: Meta<typeof AnimatedCounter> = {
