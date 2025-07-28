@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 import AnimatedText from './AnimatedText';
 
 const meta: Meta<typeof AnimatedText> = {
