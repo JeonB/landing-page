@@ -1,4 +1,4 @@
-import { useScroll, motion } from 'motion/react';
+import { useScroll, motion } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedText from './AnimatedText';
 
