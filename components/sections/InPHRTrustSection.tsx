@@ -1,73 +1,21 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
-import banner1 from '@/public/assets/images/banner1.png';
-import banner2 from '@/public/assets/images/banner2.png';
-import banner3 from '@/public/assets/images/banner3.png';
-import banner4 from '@/public/assets/images/banner4.png';
-import banner5 from '@/public/assets/images/banner5.png';
-import banner6 from '@/public/assets/images/banner6.png';
-import banner7 from '@/public/assets/images/banner7.png';
-import banner8 from '@/public/assets/images/banner8.png';
-import banner9 from '@/public/assets/images/banner9.png';
-import banner10 from '@/public/assets/images/banner10.png';
-import banner11 from '@/public/assets/images/banner11.png';
-import banner12 from '@/public/assets/images/banner12.png';
-import banner13 from '@/public/assets/images/banner13.png';
-import banner14 from '@/public/assets/images/banner14.png';
-import banner15 from '@/public/assets/images/banner15.png';
-import banner16 from '@/public/assets/images/banner16.png';
-import banner17 from '@/public/assets/images/banner17.png';
-import banner18 from '@/public/assets/images/banner18.png';
-import banner19 from '@/public/assets/images/banner19.png';
-import banner20 from '@/public/assets/images/banner20.png';
-import banner21 from '@/public/assets/images/banner21.png';
-import banner22 from '@/public/assets/images/banner22.png';
-import banner23 from '@/public/assets/images/banner23.png';
-import banner24 from '@/public/assets/images/banner24.png';
-import banner25 from '@/public/assets/images/banner25.png';
-import AnimatedHeader from '@/components/AnimatedHeader';
 import Section from '@/components/Section';
-import { Typography } from '../ui';
 import SectionHeader from '../SectionHeader';
 
-const allPartners = [
-  { src: banner1 },
-  { src: banner2 },
-  { src: banner3 },
-  { src: banner4 },
-  { src: banner5 },
-  { src: banner6 },
-  { src: banner7 },
-  { src: banner8 },
-  { src: banner9 },
-  { src: banner10 },
-  { src: banner11 },
-  { src: banner12 },
-  { src: banner13 },
-  { src: banner14 },
-  { src: banner15 },
-  { src: banner16 },
-  { src: banner17 },
-  { src: banner18 },
-  { src: banner19 },
-  { src: banner20 },
-  { src: banner21 },
-  { src: banner22 },
-  { src: banner23 },
-  { src: banner24 },
-  { src: banner25 },
-];
+const allPartners = Array.from({ length: 25 }, (_, i) => ({
+  src: `/assets/images/banner${i + 1}.png`,
+}));
 
 const topPartners = allPartners.slice(0, 13);
 const bottomPartners = allPartners.slice(13);
 
-const PartnerLogos = ({ partners }: { partners: { src: any }[] }) => (
+const PartnerLogos = ({ partners }: { partners: { src: string }[] }) => (
   <>
     {partners.map((logo, index) => (
       <div key={index} className="mx-8 flex-shrink-0">
-        <Image src={logo.src} alt="" height={45} className="h-[45px] w-auto object-contain opacity-50" />
+        <Image src={logo.src} alt="" width={150} height={45} className="h-[45px] w-auto object-contain opacity-50" />
       </div>
     ))}
   </>
@@ -76,7 +24,7 @@ const PartnerLogos = ({ partners }: { partners: { src: any }[] }) => (
 const LogoReel = ({
   partners,
   reverse = false,
-  duration = '60s',
+  duration = '120s',
 }: {
   partners: { src: any }[];
   reverse?: boolean;

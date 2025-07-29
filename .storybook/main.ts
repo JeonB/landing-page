@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/nextjs-vite';
+import { mergeConfig } from 'vite';
+import svgr from 'vite-plugin-svgr';
 
 const config: StorybookConfig = {
   stories: [
@@ -11,6 +13,11 @@ const config: StorybookConfig = {
     name: '@storybook/nextjs-vite',
     options: {},
   },
-  staticDirs: ['../public'],
+  staticDirs: ['../public', '../app/fonts'],
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      plugins: [svgr()],
+    });
+  },
 };
 export default config;
