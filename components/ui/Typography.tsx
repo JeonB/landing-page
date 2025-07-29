@@ -32,6 +32,7 @@ const typographyVariants = cva('text-foreground', {
       black: 'font-black',
     },
     fontSize: {
+      '2xs': 'text-[8px]', // 8px
       xs: 'text-xs', // 12px
       sm: 'text-sm', // 14px
       base: 'text-base', // 16px

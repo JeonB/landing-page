@@ -24,7 +24,7 @@ const PartnerLogos = ({ partners }: { partners: { src: string }[] }) => (
 const LogoReel = ({
   partners,
   reverse = false,
-  duration = '120s',
+  duration = '50s',
 }: {
   partners: { src: any }[];
   reverse?: boolean;

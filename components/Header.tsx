@@ -30,10 +30,10 @@ export default function Header() {
           </div>
 
           {/* 데스크톱 메뉴 */}
-          <nav className="ml-10 hidden items-center justify-between space-x-0 md:flex 2xl:w-96">
+          <nav className="ml-10 hidden items-center justify-between space-x-12 md:flex 2xl:w-96">
             <div className="group relative flex-1 text-center">
               <button className="flex w-full items-center justify-center space-x-1 text-white transition-colors hover:text-blue-100">
-                <Typography as="span" variant="body2" weight="bold" textColor="white">
+                <Typography as="span" variant="body2" weight="bold" textColor="white" className="whitespace-nowrap">
                   회사소개
                 </Typography>
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ export default function Header() {
 
             <div className="group relative flex-1 text-center">
               <button className="flex w-full items-center justify-center space-x-1 text-white transition-colors hover:text-blue-100">
-                <Typography as="span" variant="body2" weight="bold" textColor="white">
+                <Typography as="span" variant="body2" weight="bold" textColor="white" className="whitespace-nowrap">
                   서비스
                 </Typography>
               </button>
@@ -52,7 +52,7 @@ export default function Header() {
 
             <div className="group relative flex-1 text-center">
               <button className="flex w-full items-center justify-center space-x-1 text-white transition-colors hover:text-blue-100">
-                <Typography as="span" variant="body2" weight="bold" textColor="white">
+                <Typography as="span" variant="body2" weight="bold" textColor="white" className="whitespace-nowrap">
                   고객지원
                 </Typography>
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,37 +86,39 @@ export default function Header() {
       </div>
 
       {/* 모바일 메뉴 */}
-      {isMenuOpen && (
-        <div className="absolute top-full right-0 left-0 border-t border-blue-400 bg-blue-600 shadow-lg md:hidden">
-          <div className="space-y-2 px-4 py-2">
-            <Link href="#" className="block py-2 transition-colors hover:text-blue-100">
-              <Typography variant="body2" textColor="white" weight="bold">
-                회사소개
+      <div
+        className={`bg-blue-primary absolute top-full right-0 left-0 transform rounded-2xl border-t border-blue-400 shadow-lg transition-all duration-300 ease-in-out md:hidden ${
+          isMenuOpen ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'
+        }`}
+      >
+        <div className="space-y-2 px-4 py-2">
+          <Link href="#" className="block py-2 transition-colors hover:text-blue-100">
+            <Typography variant="body2" textColor="white" weight="bold">
+              회사소개
+            </Typography>
+          </Link>
+          <Link href="#" className="block py-2 transition-colors hover:text-blue-100">
+            <Typography variant="body2" textColor="white" weight="bold">
+              서비스
+            </Typography>
+          </Link>
+          <Link href="#" className="block py-2 transition-colors hover:text-blue-100">
+            <Typography variant="body2" textColor="white" weight="bold">
+              고객지원
+            </Typography>
+          </Link>
+          <div className="border-t border-blue-400 pt-2">
+            <button className="flex items-center space-x-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white">
+              <Typography as="span" variant="caption">
+                🇰🇷
               </Typography>
-            </Link>
-            <Link href="#" className="block py-2 transition-colors hover:text-blue-100">
-              <Typography variant="body2" textColor="white">
-                서비스
+              <Typography as="span" variant="caption" weight="regular" textColor="white">
+                한국어
               </Typography>
-            </Link>
-            <Link href="#" className="block py-2 transition-colors hover:text-blue-100">
-              <Typography variant="body2" textColor="white">
-                고객지원
-              </Typography>
-            </Link>
-            <div className="border-t border-blue-400 pt-2">
-              <button className="flex items-center space-x-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white">
-                <Typography as="span" variant="caption">
-                  🇰🇷
-                </Typography>
-                <Typography as="span" variant="caption" weight="regular" textColor="white">
-                  한국어
-                </Typography>
-              </button>
-            </div>
+            </button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
