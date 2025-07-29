@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import InPHRHeroSection from './InPHRHeroSection';
 
 const meta: Meta<typeof InPHRHeroSection> = {
-  title: 'Components/Sections/InPHRHeroSection',
+  title: 'Sections/InPHRHeroSection',
   component: InPHRHeroSection,
   parameters: {
     layout: 'fullscreen',

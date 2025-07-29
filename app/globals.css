@@ -43,14 +43,21 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   --radius-2xl: 20px;
-  /* Custom breakpoints */
+
+  /* 커스텀 브레이크포인트 */
   --breakpoint-6xl: 2400px;
   --breakpoint-5xl: 2200px;
   --breakpoint-4xl: 1980px;
   --breakpoint-3xl: 1680px;
   --breakpoint-2xl: 1440px;
 
+  /* 커스텀 컬러 */
   --color-blue-primary: #1272ec;
+  --color-gray-30: #d6d6d6;
+  --color-gray-50: #909090;
+  --color-gray-70: #676767;
+  --color-gray-80: #3c3c3c;
+  --color-gray-100: #222222;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -68,7 +75,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #222222;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -136,6 +143,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .text-blue-primary {
+    @apply text-blue-600;
+  }
+}
+
+.border-gradient-blue {
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #5991ff, #a5c6ff, #5991ff);
 }
 
 @keyframes focus-in-contract-bck {

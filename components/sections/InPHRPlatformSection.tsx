@@ -25,9 +25,9 @@ export default function InPHRPlatformSection({
   return (
     <Section className={className}>
       <div className="text-center">
-        <AnimatedHeader text={title} className="mb-16 text-center" />
+        <AnimatedHeader text={title} className="text-blue-primary mb-15 text-center text-[22px]" />
 
-        <div className="relative mx-auto flex min-h-[300px] items-center justify-center px-4 md:min-h-[400px]">
+        <div className="relative mx-auto flex items-center justify-center px-4">
           {/* 컨테이너 - 원들과 연결선을 포함 */}
           <div className="flex items-center justify-center gap-[25px] sm:gap-[30px] xl:gap-[37px]">
             {/* 왼쪽 원 - 사용자 */}
@@ -156,7 +156,7 @@ export default function InPHRPlatformSection({
 
         {/* 설명 텍스트 */}
         <motion.div
-          className="mx-auto mt-12 max-w-3xl"
+          className="mx-auto mt-15 max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
@@ -166,7 +166,7 @@ export default function InPHRPlatformSection({
             variant="body1"
             textColor="gray"
             align="center"
-            className="text-sm leading-relaxed whitespace-pre-line md:text-base"
+            className="text-sm leading-relaxed whitespace-pre-line md:text-lg"
           >
             {description}
           </Typography>

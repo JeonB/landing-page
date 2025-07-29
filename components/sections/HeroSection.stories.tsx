@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import HeroSection from './HeroSection';
 
 const meta: Meta<typeof HeroSection> = {
-  title: 'Components/Sections/HeroSection',
+  title: 'Sections/HeroSection',
   component: HeroSection,
   parameters: {
     layout: 'fullscreen',

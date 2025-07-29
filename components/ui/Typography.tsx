@@ -55,14 +55,14 @@ const typographyVariants = cva('text-foreground', {
       muted: 'text-muted-foreground',
       white: 'text-white',
       black: 'text-black',
-      blue: 'text-blue-600',
+      blue: 'text-blue-primary',
       green: 'text-green-600',
       red: 'text-red-600',
       yellow: 'text-yellow-600',
       purple: 'text-purple-600',
       pink: 'text-pink-600',
       indigo: 'text-indigo-600',
-      gray: 'text-gray-600',
+      gray: 'text-gray-100',
     },
     align: {
       left: 'text-left',
@@ -74,8 +74,9 @@ const typographyVariants = cva('text-foreground', {
   defaultVariants: {
     variant: 'body1',
     fontSize: 'lg',
-    textColor: 'default',
+    textColor: 'gray',
     align: 'left',
+    weight: 'regular',
   },
 });
 
